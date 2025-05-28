@@ -1,1 +1,104 @@
-<h1>Demo</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Small Business</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .service {
+      flex: 1;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Small Business</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a passionate team offering great services to our customers. Our mission is to deliver quality and build lasting relationships with clients.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Service One</h3>
+        <p>High-quality and reliable service tailored to your needs.</p>
+      </div>
+      <div class="service">
+        <h3>Service Two</h3>
+        <p>Professional and efficient solutions for your business.</p>
+      </div>
+      <div class="service">
+        <h3>Service Three</h3>
+        <p>Affordable and trusted by many satisfied clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@mysmallbusiness.com</p>
+    <p>Phone: +1 (555) 123-4567</p>
+    <p>Address: 123 Main Street, Your City</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Small Business. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
