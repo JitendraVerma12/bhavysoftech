@@ -1,136 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bhavy Softech</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .service {
-      flex: 1;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 2rem;
-    }
-    @media (max-width: 600px) {
-      .services {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavy Softech - Smart Fleet Management Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00529B; /* Primary blue */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #003p7a; /* Darker blue on hover */
+        }
+        .hero-bg {
+            background-color: #00529B; /* Primary Blue */
+            color: white;
+        }
+        .section-title {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            margin-bottom: 1.5rem; /* 24px */
+            color: #1a202c; /* Dark gray */
+        }
+        .feature-card, .plan-card, .pricing-card, .benefit-card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover, .plan-card:hover, .pricing-card:hover, .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .cta-button {
+            background-color: #F58220; /* Orange */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #d9741a; /* Darker Orange */
+        }
+        nav a {
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #F58220; /* Orange */
+        }
+        .table-header {
+            background-color: #E2E8F0; /* Light Gray */
+            font-weight: 600;
+        }
+        .logo-text {
+            font-size: 1.875rem; /* 30px */
+            font-weight: 700;
+            color: #00529B; /* Primary Blue */
+        }
+        .logo-subtext {
+            font-size: 0.875rem; /* 14px */
+            color: #F58220; /* Orange */
+            letter-spacing: 0.1em;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-  <header>
-    <h1>Bhavy Softech</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="flex flex-col items-start">
+                <div class="logo-text">BHAVY</div>
+                <div class="logo-subtext">SOFTECH</div>
+            </a>
+            <nav class="space-x-4 md:space-x-6">
+                <a href="#about" class="hover:text-orange-500">About</a>
+                <a href="#features" class="hover:text-orange-500">Features</a>
+                <a href="#pricing" class="hover:text-orange-500">Pricing</a>
+                <a href="#contact" class="hover:text-orange-500">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We at Bhavy Softech are pleased to present our tailored fleet management solution designed to streamline operations, reduce costs, and enhance the safety and efficiency of your vehicle fleet. Our innovative technology and customer-first approach make us a trusted partner in transforming transportation logistics.
-<br> Thank you for considering this proposal. We look forward to collaborating with you. </br>
-<br>●	Company Name: Bhavy Softech</br>
-<br>●	Founded: 2025</br>
-<br>●	Headquarters: Jaipur, Rajasthan</br>
-<br>●	Core Offerings:</br>
-<br>o	Fleet Tracking & Telematics</br>
-<br>o	Driver Behaviour Monitoring</br>
-<br>o	Predictive Maintenance</br>
-<br>o	Fuel & Expense Management</br>
-<br>o	Real-Time Reporting & Analytics</br>
-<br><br>Our Mission: To empower businesses with smart, data-driven fleet operations.</br>
+    <section id="hero" class="hero-bg py-16 md:py-24 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Smart & Scalable Fleet Management Solutions</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+                Streamline operations, reduce costs, and enhance the safety and efficiency of your vehicle fleet with Bhavy Softech.
+                Our innovative technology and customer-first approach make us a trusted partner in transforming transportation logistics.
+            </p>
+            <a href="#contact" class="cta-button inline-block text-lg">Request a Demo</a>
+        </div>
+    </section>
 
-</p>
-  </section>
+    <section id="about" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">About Bhavy Softech</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-4">
+                        Founded in <span class="font-semibold text-blue-600">2025</span> and headquartered in <span class="font-semibold text-blue-600">Jaipur, Rajasthan</span>, Bhavy Softech is dedicated to revolutionizing fleet management.
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-700">Our Mission:</h3>
+                    <p class="text-lg mb-6 italic">"To empower businesses with smart, data-driven fleet operations."</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700">Core Offerings:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            Fleet Tracking & Telematics
+                        </li>
+                        <li class="flex items-center">
+                             <svg class="w-6 h-6 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            Driver Behaviour Monitoring
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                            Predictive Maintenance
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Fuel & Expense Management
+                        </li>
+                        <li class="flex items-center">
+                           <svg class="w-6 h-6 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Real-Time Reporting & Analytics
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Executive Summary</h3>
-        <p>This proposal outlines a comprehensive fleet management solution by Bhavy Softech, including GPS tracking, route optimization, fuel management, maintenance scheduling, and analytics. Our goal is to provide [Client Name] with a scalable and cost-effective system that improves visibility, compliance, and productivity.</p>
-      </div>
-      <div class="service">
-        <h3>Client Objective</h3>
-        <p>Based on our initial discussions and understanding, your key objectives are:
-         <br>       ●	Reduce fuel and maintenance costs </br>
-          <br>       ●	Improve driver performance and safety </br>
-           <br>      ●	Enhance real-time visibility of fleet operations</br>
-          <br>       ●	Ensure compliance and streamline reporting</br>
-          <br>       ●	Support business growth with scalable technology</br>
-</p>
-      </div>
-      <div class="service">
-        <h3>Our Proposed Solution</h3>
-        <p><br>Key Features:</br>
-         <br>   Feature                                        	Description</br>
-          <br>  GPS Vehicle Tracking          Real-time tracking with geofencing and trip history</br>
-          <br>  Route Optimization	          Reduce travel time and fuel usage with smart routing</br>
-          <br>  Driver Monitoring	            Scorecards, alerts, and behaviour analytics for improved safety</br>
-          <br>  Maintenance Scheduling	      Automated reminders and logs to reduce downtime</br>
-          <br>  Fuel Management	              Track fuel usage, theft, and efficiency</br>
-           <br> Dashboard & Reporting        	Customizable dashboards with real-time and historical analytics</br>
-           <br> Mobile App Access	            Easy access for managers and drivers via Android & iOS apps</br>
-           <br> Integration Capabilities	    API support for ERP, TMS, and other systems</br>
-</p>
-      </div>
-    </div>
-  </section>
+    <section id="objectives" class="py-16 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">Helping You Achieve Your Goals</h2>
+            <p class="text-center text-lg mb-10 max-w-2xl mx-auto">We understand your key objectives and our solutions are designed to address them effectively:</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="benefit-card text-center">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Reduce Costs</h3>
+                    <p>Minimize fuel and maintenance expenses through smart optimization and predictive analytics.</p>
+                </div>
+                <div class="benefit-card text-center">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Improve Performance</h3>
+                    <p>Enhance driver safety and performance with behavior monitoring and targeted feedback.</p>
+                </div>
+                <div class="benefit-card text-center">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Enhance Visibility</h3>
+                    <p>Gain real-time insights into your fleet operations for better decision-making.</p>
+                </div>
+                <div class="benefit-card text-center md:col-span-1 lg:col-auto">
+                     <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Ensure Compliance</h3>
+                    <p>Streamline reporting and ensure adherence to industry regulations.</p>
+                </div>
+                <div class="benefit-card text-center md:col-span-1 lg:col-auto">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Support Growth</h3>
+                    <p>Leverage scalable technology that adapts to your evolving business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-<p>    Bhavy Softech </p>
-<p> [Address: 123 Main Street, Jaipur] </p>
-<p> 📞 [Phone: +91- 9166378971 ] </p>
-<p> 📧 [Email: contact@bhavysoftech.com]</p>
-<p> 🌐 [www.bhavysoftech.com]</p>
+    <section id="features" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">Our Comprehensive Solution</h2>
+            <p class="text-center text-lg mb-10 max-w-2xl mx-auto">Discover the key features designed to optimize your fleet management:</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">GPS Vehicle Tracking</h3>
+                    <p>Real-time tracking with geofencing and trip history.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Route Optimization</h3>
+                    <p>Reduce travel time and fuel usage with smart routing.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Driver Monitoring</h3>
+                    <p>Scorecards, alerts, and behaviour analytics for improved safety.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Maintenance Scheduling</h3>
+                    <p>Automated reminders and logs to reduce downtime.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Fuel Management</h3>
+                    <p>Track fuel usage, theft, and efficiency.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Dashboard & Reporting</h3>
+                    <p>Customizable dashboards with real-time and historical analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Mobile App Access</h3>
+                    <p>Easy access for managers and drivers via Android & iOS apps.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Integration Capabilities</h3>
+                    <p>API support for ERP, TMS, and other systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </section>
+    <section id="implementation" class="py-16 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">Seamless Implementation Plan</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="plan-card">
+                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Phase 1: Onboarding & Configuration</h3>
+                    <p class="text-gray-600">(Week 1–2) Account setup, user training, hardware installation (if needed).</p>
+                </div>
+                <div class="plan-card">
+                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Phase 2: Pilot Testing</h3>
+                    <p class="text-gray-600">(Week 3–4) Monitor pilot group performance and gather feedback.</p>
+                </div>
+                <div class="plan-card">
+                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Phase 3: Full Deployment</h3>
+                    <p class="text-gray-600">(Week 5 onward) Rollout across entire fleet with dedicated support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Bhavy Softech. All rights reserved.</p>
-  </footer>
+    <section id="pricing" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">Transparent Pricing</h2>
+            <p class="text-center text-lg mb-10 max-w-2xl mx-auto">Flexible and clear pricing to suit your fleet's needs. Final pricing subject to customization and fleet size.</p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="text-left py-3 px-4">Item</th>
+                            <th class="text-left py-3 px-4">Cost</th>
+                            <th class="text-left py-3 px-4">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-4">Software License (Monthly)</td>
+                            <td class="py-3 px-4">[X]/vehicle</td>
+                            <td class="py-3 px-4">Includes support and updates</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-4">GPS Devices (One-time)</td>
+                            <td class="py-3 px-4">[X]/unit</td>
+                            <td class="py-3 px-4">Optional: Leasing options available</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td class="py-3 px-4">Training & Setup</td>
+                            <td class="py-3 px-4">[X]</td>
+                            <td class="py-3 px-4">One-time onboarding fee</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Custom Integrations</td>
+                            <td class="py-3 px-4">TBD</td>
+                            <td class="py-3 px-4">Based on API and third-party systems</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-16 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-center">Why Partner with Bhavy Softech?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="benefit-card">
+                    <span class="text-3xl">✅</span>
+                    <h3 class="text-xl font-semibold my-2">Proven Experience</h3>
+                    <p>Extensive expertise in logistics and fleet solutions.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="text-3xl">🚀</span>
+                    <h3 class="text-xl font-semibold my-2">Scalable Platform</h3>
+                    <p>Future-ready technology that grows with your business.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="text-3xl">🔐</span>
+                    <h3 class="text-xl font-semibold my-2">Data Security</h3>
+                    <p>Robust data security and privacy compliance guaranteed.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="text-3xl">🧑‍💼</span> <h3 class="text-xl font-semibold my-2">24/7 Customer Support</h3>
+                    <p>Dedicated account managers and round-the-clock assistance.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="text-3xl">📈</span>
+                    <h3 class="text-xl font-semibold my-2">Actionable Analytics</h3>
+                    <p>Real-time analytics to drive insightful business decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="next-steps" class="py-16 md:py-24 hero-bg text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Fleet?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                We’d love to schedule a demo and answer any questions you may have. Once you’re ready, we can begin the onboarding process within a week.
+                Let’s drive your business forward—together.
+            </p>
+            <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-200 font-semibold py-3 px-8 rounded-lg text-lg transition duration-300">
+                Schedule a Demo
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-800 text-gray-300 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold mb-8 text-white">Contact Us</h2>
+            <div class="max-w-md mx-auto">
+                <p class="mb-2">Nitesh Sharma</p>
+                <p class="mb-2">Bhavy Softech</p>
+                <p class="mb-2">[Your Address Line Here], Jaipur, Rajasthan</p>
+                <p class="mb-2">📞 Phone: <a href="tel:+919166378971" class="hover:text-orange-400">+91 91663 78971</a></p>
+                <p class="mb-2">📧 Email: <a href="mailto:[YourEmail@example.com]" class="hover:text-orange-400">[YourEmail@example.com]</a></p>
+                <p class="mb-6">🌐 Website: <a href="[YourWebsite.com]" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400">[YourWebsite.com]</a></p>
+                <p class="text-sm">&copy; <span id="currentYear"></span> Bhavy Softech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
